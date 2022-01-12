@@ -1,0 +1,203 @@
+@charset "UTF-8";
+$mainColor : hsl(228, 56%, 26%);
+$darkColor: hsl(229, 57%, 11%);
+$textColor:  hsl(229, 7%, 55%);
+$paleColor: hsl(243, 100%, 93%);
+$fontStyle : 'Raleway';
+$imageheight: 20px;
+$imagewidth: 20px;
+body{
+    background-image: url("images/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font: {
+        size: 14px;
+        family: $fontStyle;
+        weight: 400;
+    }
+    color: $textColor;
+    > .container{
+        margin-top: 35%;
+        justify-content: space-around;
+
+        display: flex;
+        flex-wrap: wrap;
+        > .container1 {
+            min-width: 270px;
+            background-color: $mainColor;
+            padding: 3em 1em 2em 3em;
+            margin: .2em auto;
+            border-radius: .8em;
+            border-top-right-radius: 33%  50%;
+            .icons{
+                padding-top: 2em;
+                img{
+                    background-color: $darkColor;
+                    height: $imageheight;
+                    width: $imagewidth;
+                    padding: .7em;
+                    margin: .5em;
+                    border-radius: .5em;
+                }
+            }
+        }
+        > .container2{
+            min-width: 270px;
+            background-color: $mainColor;
+            padding: 1em 2em 3em 2em;
+            margin: 1em auto;
+            border-radius: .7em;
+            color: $textColor;
+            > .dataInfo{
+                display: block;
+                .progressBar{
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 100%;
+                    height: 1.5em;
+                    border-radius: 1em;
+                    background-color: $darkColor;
+                    position: relative;
+                }
+                .progressBar::-webkit-slider-thumb{
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background: $paleColor;
+                    width: .8em;
+                    height: .8em;
+                    border-radius: 50%;
+                    margin-top: .11em;
+                    position: absolute;
+                    right: 18.5%;
+                    
+                }
+              
+                .progressBar::-webkit-slider-runnable-track{
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background:linear-gradient(to right, pink, rgb(238, 86, 86));
+                    height: 1.11em;
+                    border-radius: 2em;
+                    margin: .25em;
+                    max-width: 81.5%;
+                    padding-right: .15em;
+                    margin-bottom: .35em;
+                    
+                }
+                
+                .dataRange{
+                    display: flex;
+                    justify-content: space-between;
+                    color: $paleColor;
+                    padding: .5em;
+                    padding-bottom: 1em;
+                }
+            
+            }
+            .infoMessage{
+                text-align: center;
+                .digitValue{
+                    color: $paleColor;
+                }
+            }
+            position: relative;
+            .leftOver{
+                display: flex;
+                position: absolute;
+                top: 8em;
+                right: 20%;
+                left: 20%;
+                padding: 1em;
+                min-width: 12em;
+                background-color: $paleColor;
+                border-radius: .7em;
+                text-transform: uppercase;
+                font-weight: 700;
+                align-items: center;
+                justify-content: center;
+                
+                .digitNumber{
+                    font: {
+                        size: 3em;
+                        weight: 700;
+                        
+                    }
+                    color: $darkColor;
+                }
+                .notice{
+                    text-align: center;
+                    padding: .5em;
+                }
+            }
+        }
+    }
+    
+    .desktopBackground{
+        display: none;
+    }
+    
+    > .attribution{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px){
+        
+        body{           
+            background:  $darkColor;
+            
+            .container{
+                margin-bottom: -5em;
+                padding: 0;
+
+                position: relative;
+                left: 5%;
+                .container1{
+                    margin-right: 1em;
+                }
+                > .container2{
+                    min-width: 40%;
+                    min-height: 8em;
+                    padding: 1em 3em;
+                    margin-left: 1em;
+                    > .infoMessage{
+                        text-align: left;
+                        font-size: 18px;
+                    }
+                    > .messageLogo{
+                        padding: .5em 0;
+                        min-width: 11.5em;
+                        min-height: 4em;
+                        background-color: $paleColor;
+                        position: absolute;
+                        top: -3.5em;
+                        left: 60%;
+                        right: 31%;
+                        z-index: 1;
+                        border-radius: .7em;
+                    }
+                    > .leftOver{
+                        position: absolute;
+                        top: -5em;
+                        left: 60%;
+                        right: 30%;
+                        max-width: 10em;
+                        padding: 1em .2em 2.2em .2em;
+                        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+                        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 75%, 100% 100%, 86% 74%, 0 74%);
+                        z-index: 2;
+                    }
+                    margin-top: 3.5em;
+                    margin-bottom: 0;
+                }
+                
+            }
+            .desktopBackground{
+                display: block;
+                z-index: 10;
+            }
+            
+            
+
+        }
+    }
