@@ -140,7 +140,8 @@ body > .attribution {
     background: #0c122c;
   }
   body .container {
-    margin-bottom: -5em;
+    margin: 15%;
+    margin-bottom: -8em;
     padding: 0;
     position: relative;
     left: 5%;
@@ -184,7 +185,7 @@ body > .attribution {
     z-index: 2;
   }
   body .desktopBackground {
-    display: block;
+    display: inline-block;
     z-index: 10;
   }
 }
