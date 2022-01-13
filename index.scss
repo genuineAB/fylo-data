@@ -147,7 +147,8 @@ body{
             background:  $darkColor;
             
             .container{
-                margin-bottom: -5em;
+                margin: 15%;
+                margin-bottom: -8em;
                 padding: 0;
 
                 position: relative;
@@ -193,7 +194,7 @@ body{
                 
             }
             .desktopBackground{
-                display: block;
+                display: inline-block;
                 z-index: 10;
             }
             
